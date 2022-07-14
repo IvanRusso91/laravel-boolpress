@@ -1,21 +1,36 @@
 <template>
-    <div class="box-x">
+    <div>
+        <HeaderComp />
 
-        <h1>i miei post!</h1>
+        <div class="box-x">
 
-        <div class="container-r">
-            <div class="box" v-for="post in posts" :key="post.id">
-                <h3>{{post.id}}. {{post.title}}</h3>
-                <p>{{post.content}}</p>
+            <!-- <h1>i miei post!</h1>
+
+            <div class="container-r">
+                <div class="box" v-for="post in posts" :key="post.id">
+                    <h3>{{post.id}}. {{post.title}}</h3>
+                    <p>{{post.content}}</p>
+                </div>
             </div>
-        </div>
+        </div> -->
+
+        <FooterComp />
+        <router-view></router-view>
     </div>
 
 </template>
 
 <script>
+
+import HeaderComp from 'resources/js/components/HeaderComp'
+import FooterComp from 'resources/js/components/FooterComp'
+
 export default {
     name: 'App',
+    components:[
+        HeaderComp,
+        FooterComp,
+    ],
 
     data(){
         return{

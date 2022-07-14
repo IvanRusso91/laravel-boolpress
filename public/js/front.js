@@ -1908,8 +1908,13 @@ module.exports = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+!(function webpackMissingModule() { var e = new Error("Cannot find module 'resources/js/components/HeaderComp'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+!(function webpackMissingModule() { var e = new Error("Cannot find module 'resources/js/components/FooterComp'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'App',
+  components: [!(function webpackMissingModule() { var e = new Error("Cannot find module 'resources/js/components/HeaderComp'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), !(function webpackMissingModule() { var e = new Error("Cannot find module 'resources/js/components/FooterComp'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())],
   data: function data() {
     return {
       apiUrl: 'http://127.0.0.1:8000/api/posts',
@@ -1947,7 +1952,7 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", {
+  return _c("div", [_c("HeaderComp"), _vm._v(" "), _c("div", {
     staticClass: "box-x"
   }, [_c("h1", [_vm._v("i miei post!")]), _vm._v(" "), _c("div", {
     staticClass: "container-r"
@@ -1956,7 +1961,7 @@ var render = function render() {
       key: post.id,
       staticClass: "box"
     }, [_c("h3", [_vm._v(_vm._s(post.id) + ". " + _vm._s(post.title))]), _vm._v(" "), _c("p", [_vm._v(_vm._s(post.content))])]);
-  }), 0)]);
+  }), 0)]), _vm._v(" "), _c("FooterComp"), _vm._v(" "), _c("router-view")], 1);
 };
 
 var staticRenderFns = [];
@@ -16934,11 +16939,36 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
+!(function webpackMissingModule() { var e = new Error("Cannot find module 'resources/js/components/page/HomeComp'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+!(function webpackMissingModule() { var e = new Error("Cannot find module 'resources/js/components/page/AboutComp'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+!(function webpackMissingModule() { var e = new Error("Cannot find module 'resources/js/components/page/BlogComp'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+!(function webpackMissingModule() { var e = new Error("Cannot find module 'resources/js/components/page/ContactsComp'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 
 
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]);
+
+
+
+
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
-  mode: 'hystory'
+  mode: 'hystory',
+  routes: [{
+    path: '/',
+    name: 'home',
+    component: !(function webpackMissingModule() { var e = new Error("Cannot find module 'resources/js/components/page/HomeComp'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())
+  }, {
+    path: '/chi-siamo',
+    name: 'About',
+    component: !(function webpackMissingModule() { var e = new Error("Cannot find module 'resources/js/components/page/AboutComp'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())
+  }, {
+    path: '/blog',
+    name: 'blog',
+    component: !(function webpackMissingModule() { var e = new Error("Cannot find module 'resources/js/components/page/BlogComp'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())
+  }, {
+    path: '/contatti',
+    name: 'contacts',
+    component: contactsComp
+  }]
 });
 /* harmony default export */ __webpack_exports__["default"] = (router);
 
