@@ -2,17 +2,21 @@
     <div>
         <HeaderComp />
 
-        <div class="box-x">
+        <main>
 
-            <!-- <h1>i miei post!</h1>
+        </main>
+        <!-- <div class="box-x">
+
+             <<h1>i miei post!</h1>
 
             <div class="container-r">
                 <div class="box" v-for="post in posts" :key="post.id">
                     <h3>{{post.id}}. {{post.title}}</h3>
                     <p>{{post.content}}</p>
                 </div>
-            </div>
-        </div> -->
+            </div> -->
+
+        <!-- </div> -->
 
         <FooterComp />
         <router-view></router-view>
@@ -22,20 +26,21 @@
 
 <script>
 
-import HeaderComp from 'resources/js/components/HeaderComp'
-import FooterComp from 'resources/js/components/FooterComp'
+import HeaderComp from './components/HeaderComp';
+import FooterComp from './components/FooterComp'
 
 export default {
     name: 'App',
-    components:[
+    components:{
         HeaderComp,
         FooterComp,
-    ],
+
+    },
 
     data(){
         return{
             apiUrl: 'http://127.0.0.1:8000/api/posts',
-            posts: [],
+            posts: null,
         }
     },
 

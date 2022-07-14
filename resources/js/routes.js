@@ -5,16 +5,16 @@ import VueRouter from 'vue-router';
 
 Vue.use(VueRouter);
 
-import HomeComp from 'resources/js/components/page/HomeComp';
-import AboutComp from 'resources/js/components/page/AboutComp';
-import BlogComp from 'resources/js/components/page/BlogComp';
-import ContactsComp from 'resources/js/components/page/ContactsComp'
+import HomeComp from './components/page/HomeComp';
+import AboutComp from './components/page/AboutComp';
+import BlogComp from './components/page/BlogComp';
+import ContactsComp from './components/page/ContactsComp';
 
 
 
 
 const router = new VueRouter({
-    mode:'hystory',
+    mode:'history',
 
     routes:[
         {
@@ -35,7 +35,7 @@ const router = new VueRouter({
         {
             path: '/contatti',
             name: 'contacts',
-            component: contactsComp,
+            component: ContactsComp,
         },
     ]
 })
