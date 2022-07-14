@@ -29,7 +29,7 @@ export default {
 
 
 header{
-    background-color: brown;
+    background-color: rgb(0, 0, 0);
     height: 50px;
     padding: 20px;
 
@@ -46,7 +46,7 @@ header{
                 &.active,
                 &:hover{
                     text-decoration: underline;
-                    color: yellow;
+                    color: rgb(0, 189, 9);
                 }
             }
         }

@@ -3,6 +3,7 @@
         <HeaderComp />
 
         <main>
+            <router-view></router-view>
 
         </main>
         <!-- <div class="box-x">
@@ -19,7 +20,6 @@
         <!-- </div> -->
 
         <FooterComp />
-        <router-view></router-view>
     </div>
 
 </template>
@@ -28,6 +28,7 @@
 
 import HeaderComp from './components/HeaderComp';
 import FooterComp from './components/FooterComp'
+
 
 export default {
     name: 'App',
