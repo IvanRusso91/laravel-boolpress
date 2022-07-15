@@ -51,6 +51,7 @@ export default {
 
     methods:{
         getApi(page){
+            this.pages= null;
             axios.get(this.apiUrl + "?page=" + page)
             .then(r=>{
                 this.posts= r.data.data;
@@ -71,6 +72,20 @@ export default {
     .box{
         height: calc(100vh - 100px);
         background-color: rgb(0, 101, 184);
+        overflow: hidden;
+        &:hover{
+                overflow: auto;
+                &::-webkit-scrollbar {
+                    width: 5px;
+                }
+                &::-webkit-scrollbar-track {
+                    border-radius: 10px;
+                }
+                &::-webkit-scrollbar-thumb {
+                    background: rgb(32, 160, 0);
+                    border-radius: 10px;
+                }
+        }
         h1{
             color:white ;
             text-align: center;
@@ -93,7 +108,7 @@ export default {
             justify-content: center;
             .btn{
                 padding: 15px;
-                background-color: rgb(0, 189, 9);
+                background-color: rgb(4, 175, 13);
                 border-radius: 5px;
                 color: white;
             }

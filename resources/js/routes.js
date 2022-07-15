@@ -9,6 +9,8 @@ import HomeComp from './components/page/HomeComp';
 import AboutComp from './components/page/AboutComp';
 import BlogComp from './components/page/BlogComp';
 import ContactsComp from './components/page/ContactsComp';
+import PostDetail from './components/page/PostDetail';
+
 
 
 
@@ -36,6 +38,11 @@ const router = new VueRouter({
             path: '/contatti',
             name: 'contacts',
             component: ContactsComp,
+        },
+        {
+            path: '/dettaglio-post/:slug',
+            name: 'detail',
+            component: PostDetail,
         },
     ]
 })
