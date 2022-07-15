@@ -7,18 +7,19 @@
             :key="post.id"
             :post="post"
             />
-
-            <button @click="getApi(pagination.current -1)"
+        </div>
+        <div class="box-btn">
+            <button class="btn btn-left" @click="getApi(pagination.current -1)"
             :disabled="pagination.current === 1"> indietro </button>
 
-            <button
+            <button class="btn "
             v-for="i in pagination.last" :key="i"
             @click="getApi(i)"
             :disabled="pagination.current === i">
             {{ i }}
             </button>
 
-            <button @click="getApi(pagination.current +1)"
+            <button class="btn btn-right" @click="getApi(pagination.current +1)"
             :disabled="pagination.current === pagination.last"> avanti </button>
         </div>
     </div>
@@ -76,9 +77,30 @@ export default {
             padding: 50px 0;
         }
         .container{
+            display: flex;
+            flex-wrap: wrap;
             width: 80%;
             margin: auto;
             margin-bottom: 30px;
+
+
+        }
+
+        .box-btn{
+            width: 80%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            .btn{
+                padding: 15px;
+                background-color: rgb(0, 189, 9);
+                border-radius: 5px;
+                color: white;
+            }
+            .btn-left,
+            .btn-right{
+                margin: 0 10px;
+            }
         }
     }
 </style>
